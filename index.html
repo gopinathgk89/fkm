@@ -1,0 +1,3344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>School Navbar</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    height:2000px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.school-navbar{
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:9999;
+    padding:12px 0;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+    border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#9DF105 !important;
+    font-size:22px;
+    font-weight:700;
+}
+
+/* LOGO IMAGE */
+
+.logo-img{
+    width:240px;   /* Change Size Here */
+    height:50px;  /* Change Size Here */
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.3s ease;
+}
+
+/* Hover Effect */
+ 
+.logo-img:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   MENUS
+========================= */
+
+.navbar-nav{
+    gap:10px;
+}
+
+.nav-link{
+    position:relative;
+    color:#8BC51E !important;
+    font-size:15px;
+    font-weight:500;
+    padding:10px 18px !important;
+    border-radius:10px;
+    transition:0.3s ease;
+}
+
+.nav-link:hover{
+    
+    transform:translateY(-2px);
+}
+
+.nav-link::before{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:3px;
+    background:#22c55e;
+    transition:0.4s ease;
+    border-radius:10px;
+}
+
+.nav-link:hover::before{
+    width:100%;
+}
+
+.active-link{
+    background:#22c55e;
+    color:#fff !important;
+    box-shadow:0 6px 15px rgba(34,197,94,0.3);
+}
+
+/* =========================
+   MOBILE BUTTON
+========================= */
+
+.navbar-toggler{
+    border:none;
+    background:#8BC51E;
+    padding:8px 10px;
+    border-radius:10px;
+    box-shadow:none !important;
+}
+
+.navbar-toggler i{
+    color:#15803d;
+    font-size:24px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .navbar-collapse{
+        background:#fff;
+        margin-top:18px;
+        padding:20px;
+        border-radius:16px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .navbar-nav{
+        gap:12px;
+    }
+
+    .nav-link{
+        padding:14px 16px !important;
+    }
+
+    .navbar-brand{
+        font-size:18px;
+    }
+
+    .logo-img{
+        width:220px;
+        height:38px;
+    }
+
+}
+
+
+  .hero-slider{
+      position:relative;
+    }
+
+    .carousel-item{
+      height:100vh;
+      min-height:650px;
+      position:relative;
+    }
+
+    .carousel-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* Overlay */
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to right,
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.35));
+      z-index:1;
+    }
+
+    /* Content */
+
+    .slider-content{
+      position:absolute;
+      top:50%;
+      left:10%;
+      transform:translateY(-50%);
+      z-index:2;
+      color:#fff;
+      max-width:650px;
+      animation:fadeUp 1.2s ease;
+    }
+
+    .slider-content span{
+      background:#22c55e;
+      color:#fff;
+      padding:10px 22px;
+      border-radius:50px;
+      font-size:14px;
+      font-weight:500;
+      display:inline-block;
+      margin-bottom:22px;
+      letter-spacing:1px;
+      box-shadow:0 8px 20px rgba(34,197,94,0.3);
+    }
+
+    .slider-content h1{
+      font-size:70px;
+      font-weight:700;
+      line-height:1.2;
+      margin-bottom:20px;
+    }
+
+    .slider-content h1 .green{
+      color:#4ade80;
+    }
+
+    .slider-content p{
+      font-size:18px;
+      line-height:1.8;
+      margin-bottom:30px;
+      color:#f1f1f1;
+    }
+
+    .hero-btn{
+      display:inline-block;
+      background:#22c55e;
+      color:#fff;
+      padding:15px 35px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.4s ease;
+      box-shadow:0 10px 25px rgba(34,197,94,0.3);
+    }
+
+    .hero-btn:hover{
+      background:#16a34a;
+      transform:translateY(-3px);
+    }
+
+    /* Animation */
+
+    @keyframes fadeUp{
+
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+
+    }
+
+    /* Slider Buttons */
+
+    .carousel-control-prev,
+    .carousel-control-next{
+      width:70px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+      background-color:#22c55e;
+      border-radius:50%;
+      padding:20px;
+      background-size:50%;
+    }
+
+    /* =========================
+       MOBILE RESPONSIVE
+    ========================= */
+
+    @media(max-width:991px){
+
+      .carousel-item{
+        height:90vh;
+        min-height:600px;
+      }
+
+      .slider-content{
+        left:5%;
+        right:5%;
+        max-width:100%;
+      }
+
+      .slider-content h1{
+        font-size:42px;
+      }
+
+      .slider-content p{
+        font-size:15px;
+      }
+
+    }
+
+    @media(max-width:576px){
+
+      .carousel-item{
+        height:85vh;
+        min-height:520px;
+      }
+
+      .slider-content{
+        text-align:center;
+        left:5%;
+        right:5%;
+      }
+
+      .slider-content span{
+        font-size:12px;
+        padding:8px 18px;
+      }
+
+      .slider-content h1{
+        font-size:32px;
+      }
+
+      .slider-content p{
+        font-size:14px;
+        line-height:1.7;
+      }
+
+      .hero-btn{
+        padding:13px 28px;
+        font-size:14px;
+      }
+
+    }
+
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-school{
+    width:100%;
+    padding:100px 8%;
+    background:#ffffff;
+    overflow:hidden;
+}
+
+/* Flex Container */
+
+.about-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   IMAGE SIDE
+========================= */
+
+.about-image{
+    flex:1 1 500px;
+    position:relative;
+
+    /* Animation */
+    opacity:0;
+    transform:translateX(-80px);
+    transition:1s ease;
+}
+
+/* Animation Active */
+
+.about-image.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.about-image img{
+    width:100%;
+    border-radius:0px;
+    object-fit:cover;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+    transition:0.5s ease;
+}
+
+/* Hover Effect */
+
+.about-image img:hover{
+    transform:scale(1.03);
+}
+
+/* Floating Box */
+
+.about-badge{
+    position:absolute;
+    bottom:-25px;
+    right:30px;
+    background:#22c55e;
+    color:#fff;
+    padding:20px 28px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(34,197,94,0.35);
+}
+
+.about-badge h3{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+.about-badge p{
+    font-size:14px;
+    margin:0;
+}
+
+/* =========================
+   CONTENT SIDE
+========================= */
+
+.about-content{
+    flex:1 1 500px;
+
+    /* Animation */
+    opacity:0;
+    transform:translateX(80px);
+    transition:1s ease;
+}
+
+/* Animation Active */
+
+.about-content.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* Small Heading */
+
+.about-subtitle{
+    display:inline-block;
+    background:#dcfce7;
+    color:#15803d;
+    padding:10px 22px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:22px;
+}
+
+/* Main Heading */
+
+.about-content h2{
+    font-size:48px;
+    font-weight:700;
+    line-height:1.3;
+    color:#111827;
+    margin-bottom:25px;
+}
+
+.about-content h2 span{
+    color:#22c55e;
+}
+
+/* Paragraph */
+
+.about-content p{
+    font-size:16px;
+    line-height:1.9;
+    color:#6b7280;
+    margin-bottom:22px;
+}
+
+/* Features */
+
+.about-features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:35px;
+}
+
+.feature-box{
+    background:#f9fafb;
+    padding:18px 20px;
+    border-radius:16px;
+    transition:0.4s ease;
+    border:1px solid #ecfdf5;
+}
+
+.feature-box:hover{
+    transform:translateY(-5px);
+    background:#ecfdf5;
+}
+
+.feature-box h4{
+    color:#15803d;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.feature-box p{
+    font-size:14px;
+    margin:0;
+    line-height:1.7;
+}
+
+/* Button */
+
+.about-btn{
+    display:inline-block;
+    margin-top:40px;
+    background:#22c55e;
+    color:#fff;
+    text-decoration:none;
+    padding:16px 34px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.4s ease;
+    box-shadow:0 10px 25px rgba(34,197,94,0.3);
+}
+
+.about-btn:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .about-school{
+        padding:80px 6%;
+    }
+
+    .about-container{
+        flex-direction:column;
+    }
+
+    .about-content h2{
+        font-size:38px;
+    }
+
+    .about-badge{
+        right:20px;
+        bottom:-20px;
+        padding:16px 22px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .about-school{
+        padding:70px 5%;
+    }
+
+    .about-content{
+        text-align:center;
+    }
+
+    .about-content h2{
+        font-size:30px;
+    }
+
+    .about-content p{
+        font-size:14px;
+    }
+
+    .about-features{
+        grid-template-columns:1fr;
+    }
+
+    .about-badge{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        margin-top:20px;
+        text-align:center;
+    }
+
+    .about-btn{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+
+
+/* =========================
+   COUNTER SECTION
+========================= */
+
+.counter-section{
+    width:100%;
+    padding:90px 8%;
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+    overflow:hidden;
+}
+
+/* Container */
+
+.counter-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+/* Counter Box */
+
+.counter-box{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:24px;
+    padding:45px 25px;
+    text-align:center;
+    transition:0.5s ease;
+
+    /* Animation */
+    opacity:0;
+    transform:translateY(70px);
+}
+
+/* Animation Active */
+
+.counter-box.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Hover Effect */
+
+.counter-box:hover{
+    transform:translateY(-10px);
+    background:rgba(255,255,255,0.18);
+}
+
+/* Counter Number */
+
+.counter-number{
+    font-size:56px;
+    font-weight:700;
+    color:#ffffff;
+    margin-bottom:12px;
+    line-height:1;
+}
+
+/* Counter Text */
+
+.counter-text{
+    font-size:18px;
+    font-weight:500;
+    color:#f0fdf4;
+    letter-spacing:0.5px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .counter-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .counter-number{
+        font-size:48px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .counter-section{
+        padding:70px 5%;
+    }
+
+    .counter-container{
+        grid-template-columns:1fr;
+    }
+
+    .counter-box{
+        padding:38px 20px;
+    }
+
+    .counter-number{
+        font-size:42px;
+    }
+
+    .counter-text{
+        font-size:16px;
+    }
+
+}
+
+
+
+
+
+
+.academics-section{
+    width:100%;
+    padding:100px 8%;
+    background:#f9fafb;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-subtitle{
+    display:inline-block;
+    background:#dcfce7;
+    color:#15803d;
+    padding:10px 24px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.section-title h2{
+    font-size:48px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:20px;
+}
+
+.section-title h2 span{
+    color:#22c55e;
+}
+
+.section-title p{
+    max-width:750px;
+    margin:auto;
+    font-size:16px;
+    line-height:1.9;
+    color:#6b7280;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.academics-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.academic-card{
+    background:#ffffff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,0.08);
+    transition:0.5s ease;
+
+    /* Scroll Animation */
+    opacity:0;
+    transform:translateY(80px);
+}
+
+/* Animation Active */
+
+.academic-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Hover */
+
+.academic-card:hover{
+    transform:translateY(-12px);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.academic-image{
+    position:relative;
+    overflow:hidden;
+    height:250px;
+}
+
+.academic-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.6s ease;
+}
+
+/* Hover Zoom */
+
+.academic-card:hover .academic-image img{
+    transform:scale(1.1);
+}
+
+/* Overlay */
+
+.image-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,0.45),
+    transparent);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.academic-content{
+    padding:30px;
+}
+
+.academic-content h3{
+    font-size:26px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:16px;
+}
+
+.academic-content p{
+    font-size:15px;
+    line-height:1.8;
+    color:#6b7280;
+    margin-bottom:24px;
+}
+
+/* Button */
+
+.academic-btn{
+    display:inline-block;
+    background:#22c55e;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:600;
+    transition:0.4s ease;
+    box-shadow:0 10px 25px rgba(34,197,94,0.25);
+}
+
+.academic-btn:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .academics-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section-title h2{
+        font-size:38px;
+    }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:576px){
+
+    .academics-section{
+        padding:70px 5%;
+    }
+
+    .academics-container{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        margin-bottom:50px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .section-title p{
+        font-size:14px;
+    }
+
+    .academic-image{
+        height:220px;
+    }
+
+    .academic-content{
+        padding:25px;
+    }
+
+    .academic-content h3{
+        font-size:22px;
+    }
+
+    .academic-content p{
+        font-size:14px;
+    }
+
+    .academic-btn{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+
+
+
+
+.facilities-section{
+    width:100%;
+    padding:100px 8%;
+    background:#f9fafb;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.facility-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.facility-subtitle{
+    display:inline-block;
+    background:#dcfce7;
+    color:#15803d;
+    padding:10px 24px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:18px;
+}
+
+.facility-title h2{
+    font-size:48px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:18px;
+}
+
+.facility-title h2 span{
+    color:#22c55e;
+}
+
+.facility-title p{
+    max-width:760px;
+    margin:auto;
+    color:#6b7280;
+    font-size:16px;
+    line-height:1.9;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.facility-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.facility-card{
+    background:#fff;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:0.5s ease;
+
+    /* Scroll Animation */
+
+    opacity:0;
+    transform:translateY(80px);
+}
+
+/* Animation Active */
+
+.facility-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Hover */
+
+.facility-card:hover{
+    transform:translateY(-12px);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.facility-image{
+    position:relative;
+    height:240px;
+    overflow:hidden;
+}
+
+.facility-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.6s ease;
+}
+
+/* Image Hover Zoom */
+
+.facility-card:hover .facility-image img{
+    transform:scale(1.1);
+}
+
+/* Overlay */
+
+.facility-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,0.45),
+    transparent);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.facility-icon{
+    position:absolute;
+    left:30px;
+    bottom:-35px;
+    width:72px;
+    height:72px;
+    background:#22c55e;
+    color:#fff;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    box-shadow:0 12px 25px rgba(34,197,94,0.35);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.facility-content{
+    padding:55px 30px 30px;
+}
+
+.facility-content h3{
+    font-size:25px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:15px;
+}
+
+.facility-content p{
+    font-size:15px;
+    line-height:1.8;
+    color:#6b7280;
+    margin-bottom:25px;
+}
+
+/* Button */
+
+.facility-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#22c55e;
+    color:#fff;
+    padding:13px 28px;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:600;
+    transition:0.4s ease;
+    box-shadow:0 10px 20px rgba(34,197,94,0.25);
+}
+
+.facility-btn:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .facility-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .facility-title h2{
+        font-size:38px;
+    }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:576px){
+
+    .facilities-section{
+        padding:70px 5%;
+    }
+
+    .facility-container{
+        grid-template-columns:1fr;
+    }
+
+    .facility-title{
+        margin-bottom:50px;
+    }
+
+    .facility-title h2{
+        font-size:30px;
+    }
+
+    .facility-title p{
+        font-size:14px;
+    }
+
+    .facility-image{
+        height:220px;
+    }
+
+    .facility-content{
+        padding:50px 24px 24px;
+    }
+
+    .facility-content h3{
+        font-size:22px;
+    }
+
+    .facility-content p{
+        font-size:14px;
+    }
+
+    .facility-btn{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+
+
+.school-gallery{
+    width:100%;
+    padding:100px 8%;
+    background:#f9fafb;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.gallery-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.gallery-subtitle{
+    display:inline-block;
+    background:#dcfce7;
+    color:#15803d;
+    padding:10px 24px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.gallery-title h2{
+    font-size:48px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:18px;
+}
+
+.gallery-title h2 span{
+    color:#22c55e;
+}
+
+.gallery-title p{
+    max-width:760px;
+    margin:auto;
+    color:#6b7280;
+    font-size:16px;
+    line-height:1.9;
+}
+
+/* =========================
+   MASONRY GALLERY
+========================= */
+
+.gallery-container{
+    columns:4 250px;
+    column-gap:20px;
+}
+
+/* Gallery Item */
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:26px;
+    margin-bottom:20px;
+    cursor:pointer;
+    break-inside:avoid;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+
+    /* Scroll Animation */
+
+    opacity:0;
+    transform:translateY(80px);
+    transition:0.8s ease;
+}
+
+/* Animation Active */
+
+.gallery-item.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Images */
+
+.gallery-item img{
+    width:100%;
+    display:block;
+    border-radius:26px;
+    transition:0.7s ease;
+}
+
+/* Hover Zoom */
+
+.gallery-item:hover img{
+    transform:scale(1.12);
+}
+
+/* Overlay */
+
+.gallery-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.15));
+    display:flex;
+    align-items:flex-end;
+    padding:28px;
+    opacity:0;
+    transition:0.5s ease;
+}
+
+.gallery-item:hover .gallery-overlay{
+    opacity:1;
+}
+
+/* Content */
+
+.gallery-content h3{
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.gallery-content p{
+    color:#f3f4f6;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:20px;
+    animation:zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn{
+
+    from{
+        transform:scale(0.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+/* Close Button */
+
+.lightbox-close{
+    position:absolute;
+    top:30px;
+    right:35px;
+    color:#fff;
+    font-size:40px;
+    cursor:pointer;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .gallery-title h2{
+        font-size:38px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .school-gallery{
+        padding:70px 5%;
+    }
+
+    .gallery-title{
+        margin-bottom:50px;
+    }
+
+    .gallery-title h2{
+        font-size:30px;
+    }
+
+    .gallery-title p{
+        font-size:14px;
+    }
+
+    .gallery-container{
+        columns:2 140px;
+        column-gap:15px;
+    }
+
+    .gallery-overlay{
+        padding:18px;
+    }
+
+    .gallery-content h3{
+        font-size:18px;
+    }
+
+    .gallery-content p{
+        font-size:12px;
+    }
+
+}
+
+
+
+.achievers-section{
+    width:100%;
+    padding:100px 8%;
+    background:#ffffff;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.achievers-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.achievers-subtitle{
+    display:inline-block;
+    background:#dcfce7;
+    color:#15803d;
+    padding:10px 24px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:18px;
+}
+
+.achievers-title h2{
+    font-size:48px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:18px;
+}
+
+.achievers-title h2 span{
+    color:#22c55e;
+}
+
+.achievers-title p{
+    max-width:720px;
+    margin:auto;
+    color:#6b7280;
+    font-size:16px;
+    line-height:1.9;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.achievers-container{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.achiever-card{
+    position:relative;
+    width:320px;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 18px 40px rgba(0,0,0,0.10);
+    transition:0.6s ease;
+
+    /* Scroll Animation */
+
+    opacity:0;
+    transform:translateY(100px);
+}
+
+/* Active Animation */
+
+.achiever-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Different Heights */
+
+.achiever-card:nth-child(1){
+    height:500px;
+}
+
+.achiever-card:nth-child(2){
+    height:620px;
+}
+
+.achiever-card:nth-child(3){
+    height:540px;
+}
+
+/* Images */
+
+.achiever-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.7s ease;
+}
+
+/* Hover Zoom */
+
+.achiever-card:hover img{
+    transform:scale(1.12);
+}
+
+/* Overlay */
+
+.achiever-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,0.82),
+    rgba(0,0,0,0.15));
+    display:flex;
+    align-items:flex-end;
+    padding:35px;
+}
+
+/* Content */
+
+.achiever-content h3{
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.achiever-content p{
+    color:#f3f4f6;
+    font-size:15px;
+    line-height:1.8;
+    margin-bottom:22px;
+}
+
+/* Button */
+
+.achiever-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#22c55e;
+    color:#fff;
+    padding:13px 28px;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:600;
+    transition:0.4s ease;
+    box-shadow:0 10px 25px rgba(34,197,94,0.25);
+}
+
+.achiever-btn:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+/* Hover Card */
+
+.achiever-card:hover{
+    transform:translateY(-12px);
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .achievers-title h2{
+        font-size:38px;
+    }
+
+    .achievers-container{
+        gap:25px;
+    }
+
+    .achiever-card{
+        width:300px;
+    }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:576px){
+
+    .achievers-section{
+        padding:70px 5%;
+    }
+
+    .achievers-title{
+        margin-bottom:50px;
+    }
+
+    .achievers-title h2{
+        font-size:30px;
+    }
+
+    .achievers-title p{
+        font-size:14px;
+    }
+
+    .achievers-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .achiever-card{
+        width:100%;
+        max-width:100%;
+        height:450px !important;
+    }
+
+    .achiever-overlay{
+        padding:25px;
+    }
+
+    .achiever-content h3{
+        font-size:24px;
+    }
+
+    .achiever-content p{
+        font-size:14px;
+    }
+
+    .achiever-btn{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+
+
+.school-footer{
+    width:100%;
+    background:#8BC51E;
+    padding:80px 8% 25px;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container{
+    display:grid;
+    grid-template-columns:2fr 1fr 1.5fr 1fr;
+    gap:50px;
+    padding-bottom:50px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+/* =========================
+   LOGO & ABOUT
+========================= */
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:25px;
+}
+
+.footer-logo img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:14px;
+    padding:8px;
+}
+
+.footer-logo h2{
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+}
+
+.footer-about p{
+    color:#f0fdf4;
+    font-size:15px;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.social-icons{
+    display:flex;
+    gap:14px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    background:rgba(255,255,255,0.15);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:18px;
+    text-decoration:none;
+    transition:0.4s ease;
+}
+
+.social-icons a:hover{
+    background:#fff;
+    color:#22c55e;
+    transform:translateY(-5px);
+}
+
+/* =========================
+   FOOTER TITLE
+========================= */
+
+.footer-title{
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:28px;
+}
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+.footer-links{
+    list-style:none;
+}
+
+.footer-links li{
+    margin-bottom:16px;
+}
+
+.footer-links li a{
+    text-decoration:none;
+    color:#f0fdf4;
+    font-size:15px;
+    transition:0.4s ease;
+}
+
+.footer-links li a:hover{
+    color:#ffffff;
+    padding-left:6px;
+}
+
+/* =========================
+   ADDRESS
+========================= */
+
+.footer-contact{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.footer-contact-item{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.footer-contact-item i{
+    color:#fff;
+    font-size:20px;
+    margin-top:3px;
+}
+
+.footer-contact-item p{
+    color:#f0fdf4;
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-bottom{
+    text-align:center;
+    padding-top:25px;
+}
+
+.footer-bottom p{
+    color:#f0fdf4;
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .footer-container{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:576px){
+
+    .school-footer{
+        padding:70px 5% 25px;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .footer-logo h2{
+        font-size:24px;
+    }
+
+    .footer-title{
+        font-size:22px;
+    }
+
+    .footer-about p,
+    .footer-links li a,
+    .footer-contact-item p{
+        font-size:14px;
+    }
+
+    .social-icons{
+        flex-wrap:wrap;
+    }
+
+}
+</style>
+</head>
+<body>
+
+<!-- =========================
+     NAVBAR START
+========================= -->
+
+<nav class="navbar navbar-expand-lg school-navbar">
+
+<div class="container">
+
+    <!-- Logo -->
+
+    <a class="navbar-brand" href="#">
+
+        <!-- YOUR LOGO IMAGE -->
+
+        <img src="logo/pva.jpg" alt="School Logo" class="logo-img">
+
+        
+
+    </a>
+
+    <!-- Mobile Toggle -->
+
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+
+        <i class="bi bi-list"></i>
+
+    </button>
+
+    <!-- Menus -->
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+
+        <ul class="navbar-nav align-items-lg-center">
+
+            <li class="nav-item">
+                <a class="nav-link " href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Academics</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Admissions</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Events</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</nav>
+
+
+
+     
+
+<div id="schoolSlider" class="carousel slide carousel-fade hero-slider" data-bs-ride="carousel">
+
+  <!-- Indicators -->
+
+  <div class="carousel-indicators">
+
+    <button type="button" data-bs-target="#schoolSlider" data-bs-slide-to="0" class="active"></button>
+
+    <button type="button" data-bs-target="#schoolSlider" data-bs-slide-to="1"></button>
+
+    <button type="button" data-bs-target="#schoolSlider" data-bs-slide-to="2"></button>
+
+  </div>
+
+  <!-- Slides -->
+
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+
+    <div class="carousel-item active" data-bs-interval="4000">
+
+      <img src="images/banner2.jpeg" alt="School Image">
+
+      <div class="overlay"></div>
+
+      <div class="slider-content">
+
+        <span style="background: #8BC51E;">WELCOME TO OUR SCHOOL</span>
+
+        <h1>
+          Park View <span class="" style="background: #8BC51E;">Academy</span>
+        </h1>
+
+        <p>
+          Building bright futures with quality education,
+          modern classrooms, and inspiring learning experiences.
+        </p>
+
+         
+
+      </div>
+
+    </div>
+
+    <!-- Slide 2 -->
+
+    <div class="carousel-item" data-bs-interval="4000">
+
+      <img src="images/banner3.jpeg" alt="School Image">
+
+      <div class="overlay"></div>
+
+      <div class="slider-content">
+
+        <span style="background:#8BC51E;">QUALITY EDUCATION</span>
+
+        <h1>
+          Learn With <span class="" style="color:white;background: #8BC51E;">Confidence</span>
+        </h1>
+
+        <p>
+          We provide innovative learning methods, experienced teachers,
+          and a safe environment for every student.
+        </p>
+
+        
+
+      </div>
+
+    </div>
+
+    <!-- Slide 3 -->
+
+    <div class="carousel-item" data-bs-interval="4000">
+
+      <img src="images/banner4.jpg" alt="School Image">
+
+      <div class="overlay"></div>
+
+      <div class="slider-content">
+
+        
+
+        <h1>
+          Shape Your <span class="green" style="color: white;background:#8BC51E;">Future</span>
+        </h1>
+
+        <p>
+          Join our vibrant academic community and empower your child
+          with knowledge, creativity, and leadership.
+        </p>
+
+         
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#schoolSlider" data-bs-slide="prev">
+
+    <span class="carousel-control-prev-icon"></span>
+
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#schoolSlider" data-bs-slide="next">
+
+    <span class="carousel-control-next-icon"></span>
+
+  </button>
+
+</div>
+
+
+
+
+<section class="about-school">
+
+    <div class="about-container">
+
+        <!-- =========================
+             IMAGE SIDE
+        ========================= -->
+
+        <div class="about-image reveal">
+
+            <img src="images/about.png" alt="School Image">
+
+            <div class="about-badge" style="background: #8BC51E;">
+                <h3>12+</h3>
+                <p>Years of Excellence</p>
+            </div>
+
+        </div>
+
+        <!-- =========================
+             CONTENT SIDE
+        ========================= -->
+
+        <div class="about-content reveal">
+
+            <span class="about-subtitle">
+                ABOUT OUR SCHOOL
+            </span>
+
+            <h2>
+                Welcome To <span style="color:#8BC51E;">Park View Academy</span>
+            </h2>
+
+            <p>
+               Our School is run by "Sellammal Memorial Educational Trust", Aniyapuram. This School aims to provide a world class education with affordable cost and to inculcate 'a sound mind in a sound body' and moral attitude to our students to gain self-confidence and self-reliance, there by enabling them to achieve a great place in a competitive environment since 2014. 
+            </p>
+
+            
+
+            <!-- Features -->
+
+            <div class="about-features">
+
+                <div class="feature-box">
+                    <h4>Smart Classrooms</h4>
+                    <p>Modern digital learning environment.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>Experienced Faculty</h4>
+                    <p>Highly qualified and caring teachers.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>Sports & Activities</h4>
+                    <p>Encouraging physical and creative growth.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>Safe Campus</h4>
+                    <p>Secure and student-friendly atmosphere.</p>
+                </div>
+
+            </div>
+
+            <!-- Button -->
+
+             
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="counter-section" style="background:#8BC51E;">
+
+    <div class="counter-container">
+        <!-- Counter 1 -->
+
+        <div class="counter-box reveal">
+
+            <h2 class="counter-number" data-target="2500">0</h2>
+
+            <p class="counter-text">
+                Students
+            </p>
+
+        </div>
+
+        <!-- Counter 2 -->
+
+        <div class="counter-box reveal">
+
+            <h2 class="counter-number" data-target="120">0</h2>
+
+            <p class="counter-text">
+                Teachers
+            </p>
+
+        </div>
+
+        <!-- Counter 3 -->
+
+        <div class="counter-box reveal">
+
+            <h2 class="counter-number" data-target="25">0</h2>
+
+            <p class="counter-text">
+                Years Experience
+            </p>
+
+        </div>
+
+        <!-- Counter 4 -->
+
+        <div class="counter-box reveal">
+
+            <h2 class="counter-number" data-target="100">4</h2>
+
+            <p class="counter-text">
+                Results
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="academics-section">
+
+    <!-- =========================
+         TITLE
+    ========================= -->
+
+    <div class="section-title">
+
+        <span class="section-subtitle">
+            OUR ACADEMICS
+        </span>
+
+        <h2>
+            Academic <span style="color:#8BC51E;">Programs</span>
+        </h2>
+
+        <p>
+            We provide a well-structured CBSE curriculum focused on
+            academic excellence, creativity, innovation, and holistic
+            student development.
+        </p>
+
+    </div>
+
+    
+
+    <div class="academics-container">
+
+        <!-- Card 1 -->
+
+        <div class="academic-card reveal">
+
+            <div class="academic-image">
+
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200" alt="Pre KG">
+
+                <div class="image-overlay"></div>
+
+            </div>
+
+            <div class="academic-content">
+
+                <h3>Pre KG</h3>
+
+                <p>
+                    A joyful learning environment designed to nurture
+                    creativity, curiosity, and foundational skills.
+                </p>
+
+                
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="academic-card reveal">
+
+            <div class="academic-image">
+
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200" alt="Primary School">
+
+                <div class="image-overlay"></div>
+
+            </div>
+
+            <div class="academic-content">
+
+                <h3>Primary School</h3>
+
+                <p>
+                    Building strong academic foundations through
+                    interactive learning and skill development.
+                </p>
+
+                 
+
+            </div>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="academic-card reveal">
+
+            <div class="academic-image">
+
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200" alt="Middle School">
+
+                <div class="image-overlay"></div>
+
+            </div>
+
+            <div class="academic-content">
+
+                <h3>Middle School</h3>
+
+                <p>
+                    Encouraging critical thinking, collaboration,
+                    leadership, and academic excellence.
+                </p>
+
+               
+
+            </div>
+
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="academic-card reveal">
+
+            <div class="academic-image">
+
+                <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200" alt="Secondary">
+
+                <div class="image-overlay"></div>
+
+            </div>
+
+            <div class="academic-content">
+
+                <h3>Secondary</h3>
+
+                <p>
+                    Comprehensive CBSE education preparing students
+                    for future academic success and growth.
+                </p>
+
+                 
+
+            </div>
+
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="academic-card reveal">
+
+            <div class="academic-image">
+
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200" alt="Senior Secondary">
+
+                <div class="image-overlay"></div>
+
+            </div>
+
+            <div class="academic-content">
+
+                <h3>Senior Secondary</h3>
+
+                <p>
+                    Focused academic programs guiding students toward
+                    higher education and career excellence.
+                </p>
+
+                
+
+            </div>
+
+        </div>
+
+        <!-- Card 6 -->
+
+        <div class="academic-card reveal">
+
+            <div class="academic-image">
+
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200" alt="Skill Development">
+
+                <div class="image-overlay"></div>
+
+            </div>
+
+            <div class="academic-content">
+
+                <h3>Skill Development</h3>
+
+                <p>
+                    Empowering students with communication, leadership,
+                    innovation, and real-world problem-solving skills.
+                </p>
+
+                 
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="facilities-section">
+
+    
+
+    <div class="facility-title">
+
+        <span class="facility-subtitle">
+            OUR FACILITIES
+        </span>
+
+        <h2>
+            Premium <span style="color:#8BC51E;">Campus Facilities</span>
+        </h2>
+
+        <p>
+            We provide modern infrastructure and world-class facilities
+            to create the best learning environment for students.
+        </p>
+
+    </div>
+
+
+
+    <div class="facility-container">
+
+        <!-- CARD 1 -->
+
+        <div class="facility-card reveal">
+
+            <div class="facility-image">
+
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200" alt="Computer Lab">
+
+                <div class="facility-overlay"></div>
+
+                <div class="facility-icon">
+                    <i class="bi bi-pc-display"></i>
+                </div>
+
+            </div>
+
+            <div class="facility-content">
+
+                <h3>Computer Lab</h3>
+
+                <p>
+                    Advanced computer labs with modern systems,
+                    digital learning tools, and internet access.
+                </p>
+
+                 
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="facility-card reveal">
+
+            <div class="facility-image">
+
+                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200" alt="Library">
+
+                <div class="facility-overlay"></div>
+
+                <div class="facility-icon">
+                    <i class="bi bi-book"></i>
+                </div>
+
+            </div>
+
+            <div class="facility-content">
+
+                <h3>Library</h3>
+
+                <p>
+                    Spacious library with thousands of books,
+                    journals, and digital resources for students.
+                </p>
+
+                 
+
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="facility-card reveal">
+
+            <div class="facility-image">
+
+                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200" alt="Science Lab">
+
+                <div class="facility-overlay"></div>
+
+                <div class="facility-icon">
+                    <i class="bi bi-flask"></i>
+                </div>
+
+            </div>
+
+            <div class="facility-content">
+
+                <h3>Science Lab</h3>
+
+                <p>
+                    Fully equipped science laboratories encouraging
+                    practical experiments and innovation.
+                </p>
+
+                 
+
+            </div>
+
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="facility-card reveal">
+
+            <div class="facility-image">
+
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200" alt="Smart Classroom">
+
+                <div class="facility-overlay"></div>
+
+                <div class="facility-icon">
+                    <i class="bi bi-easel2"></i>
+                </div>
+
+            </div>
+
+            <div class="facility-content">
+
+                <h3>Smart Classroom</h3>
+
+                <p>
+                    Interactive smart classrooms designed for
+                    engaging and technology-driven education.
+                </p>
+
+                 
+
+            </div>
+
+        </div>
+
+        <!-- CARD 5 -->
+
+        <div class="facility-card reveal">
+
+            <div class="facility-image">
+
+                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200" alt="Playground">
+
+                <div class="facility-overlay"></div>
+
+                <div class="facility-icon">
+                    <i class="bi bi-dribbble"></i>
+                </div>
+
+            </div>
+
+            <div class="facility-content">
+
+                <h3>Playground</h3>
+
+                <p>
+                    Large sports grounds promoting fitness,
+                    teamwork, discipline, and extracurricular activities.
+                </p>
+
+                 
+            </div>
+
+        </div>
+
+        <!-- CARD 6 -->
+
+        <div class="facility-card reveal">
+
+            <div class="facility-image">
+
+                <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200" alt="Hostel">
+
+                <div class="facility-overlay"></div>
+
+                <div class="facility-icon">
+                    <i class="bi bi-building"></i>
+                </div>
+
+            </div>
+
+            <div class="facility-content">
+
+                <h3>Hostel</h3>
+
+                <p>
+                    Safe and comfortable hostel facilities with
+                    modern amenities and secure environment.
+                </p>
+
+                 
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="school-gallery">
+
+    <!-- =========================
+         TITLE
+    ========================= -->
+
+    <div class="gallery-title">
+
+        <span class="gallery-subtitle">
+            SCHOOL GALLERY
+        </span>
+
+        <h2>
+            Moments Of <span style="color:#8BC51E;">Excellence</span>
+        </h2>
+
+        <p>
+            Explore memorable moments from our campus life,
+            events, classrooms, sports activities, and celebrations.
+        </p>
+
+    </div>
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <div class="gallery-container">
+
+        <!-- IMAGE 1 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Annual Day</h3>
+                    <p>Celebrating student achievements and performances.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 2 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Sports Day</h3>
+                    <p>Energetic sports activities and competitions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 3 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Classroom</h3>
+                    <p>Interactive and engaging smart classrooms.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 4 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Science Lab</h3>
+                    <p>Modern laboratories for practical learning.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 5 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Events</h3>
+                    <p>Creative cultural and educational events.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 6 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Group Activities</h3>
+                    <p>Teamwork and collaborative learning moments.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 7 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Smart Learning</h3>
+                    <p>Technology-driven learning environment.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 8 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Playground</h3>
+                    <p>Sports and fitness activities for students.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 9 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Library</h3>
+                    <p>Thousands of books and learning resources.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 10 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Lab Activities</h3>
+                    <p>Hands-on practical experiments and innovation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 11 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Hostel Life</h3>
+                    <p>Comfortable and secure hostel environment.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE 12 -->
+
+        <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200" alt="">
+            <div class="gallery-overlay">
+                <div class="gallery-content">
+                    <h3>Computer Lab</h3>
+                    <p>Advanced digital learning and coding sessions.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div class="lightbox" id="lightbox">
+
+    <span class="lightbox-close" id="closeLightbox">
+        &times;
+    </span>
+
+    <img src="" id="lightbox-img">
+
+</div>
+
+
+<section class="achievers-section">
+
+    <!-- =========================
+         TITLE
+    ========================= -->
+
+    <div class="achievers-title">
+
+        <span class="achievers-subtitle">
+            OUR ACHIEVERS
+        </span>
+
+        <h2>
+            Proud <span style="color:#8BC51E;">Moments</span>
+        </h2>
+
+        <p>
+            Celebrating the outstanding achievements, talents,
+            and success stories of our students in academics,
+            sports, and extracurricular activities.
+        </p>
+
+    </div>
+
+    <!-- =========================
+         ACHIEVERS CARDS
+    ========================= -->
+
+    <div class="achievers-container">
+
+        <!-- CARD 1 -->
+
+        <div class="achiever-card reveal">
+
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200" alt="Achiever">
+
+            <div class="achiever-overlay">
+
+                <div class="achiever-content">
+
+                    
+        
+                       
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="achiever-card reveal">
+
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200" alt="Achiever">
+
+            <div class="achiever-overlay">
+
+                <div class="achiever-content">
+
+                     
+                     
+
+                     
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="achiever-card reveal">
+
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200" alt="Achiever">
+
+            <div class="achiever-overlay">
+
+                <div class="achiever-content">
+ 
+                    
+
+                     
+
+                     
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+const counters = document.querySelectorAll('.counter-number');
+const reveals = document.querySelectorAll('.reveal');
+
+let started = false;
+
+window.addEventListener('scroll', () => {
+
+    reveals.forEach((element) => {
+
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+
+            element.classList.add('show');
+
+        }
+
+    });
+
+    const section = document.querySelector('.counter-section');
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if(sectionTop < window.innerHeight - 100 && !started){
+
+        counters.forEach(counter => {
+
+            counter.innerText = '0';
+
+            const updateCounter = () => {
+
+                const target = +counter.getAttribute('data-target');
+                const current = +counter.innerText;
+
+                const increment = target / 100;
+
+                if(current < target){ 
+
+                    counter.innerText = `${Math.ceil(current + increment)}`;
+
+                    setTimeout(updateCounter,20);
+
+                }else{
+
+                    if(target === 100){
+
+                        counter.innerText = target + '%';
+
+                    }else if(target === 2500){
+
+                        counter.innerText = target + '+';
+
+                    }else{
+
+                        counter.innerText = target + '+';
+
+                    }
+
+                }
+
+            };
+
+            updateCounter();
+
+        });
+
+        started = true;
+
+    }
+
+});
+
+</script>
+
+<script>
+
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+
+    reveals.forEach((element) => {
+
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+
+            element.classList.add("show");
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+<script>
+
+const cards = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+
+    cards.forEach((card) => {
+
+        const windowHeight = window.innerHeight;
+        const cardTop = card.getBoundingClientRect().top;
+
+        if(cardTop < windowHeight - 100){
+
+            card.classList.add('show');
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+
+<script>
+
+const facilityCards = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+
+    facilityCards.forEach((card) => {
+
+        const windowHeight = window.innerHeight;
+        const cardTop = card.getBoundingClientRect().top;
+
+        if(cardTop < windowHeight - 100){
+
+            card.classList.add('show');
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+<script>
+
+/* Scroll Animation */
+
+const galleryItems = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+
+    galleryItems.forEach((item) => {
+
+        const windowHeight = window.innerHeight;
+        const itemTop = item.getBoundingClientRect().top;
+
+        if(itemTop < windowHeight - 100){
+
+            item.classList.add('show');
+
+        }
+
+    });
+
+});
+
+/* Lightbox */
+
+const images = document.querySelectorAll('.gallery-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.getElementById('closeLightbox');
+
+images.forEach((img) => {
+
+    img.addEventListener('click', () => {
+
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+
+    });
+
+});
+
+closeBtn.addEventListener('click', () => {
+
+    lightbox.style.display = 'none';
+
+});
+
+lightbox.addEventListener('click', (e) => {
+
+    if(e.target !== lightboxImg){
+
+        lightbox.style.display = 'none';
+
+    }
+
+});
+
+</script>
+
+
+
+
+<script>
+
+const achieverCards = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+
+    achieverCards.forEach((card) => {
+
+        const windowHeight = window.innerHeight;
+        const cardTop = card.getBoundingClientRect().top;
+
+        if(cardTop < windowHeight - 100){
+
+            card.classList.add('show');
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+<footer class="school-footer">
+
+    <div class="footer-container">
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+
+                <img src="logo.png" alt="School Logo">
+
+                <h2>Park View Academy</h2>
+
+            </div>
+
+            <p>
+                Park View Academy is committed to providing quality
+                CBSE education with modern learning methods,
+                experienced faculty, and world-class facilities
+                for holistic student development.
+            </p>
+
+            <!-- Social Icons -->
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-youtube"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- =========================
+             QUICK LINKS
+        ========================= -->
+
+        <div>
+
+            <h3 class="footer-title">
+                Quick Links
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+
+                <li>
+                    <a href="#">Academics</a>
+                </li>
+
+                <li>
+                    <a href="#">Facilities</a>
+                </li>
+
+                <li>
+                    <a href="#">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- =========================
+             ADDRESS
+        ========================= -->
+
+        <div>
+
+            <h3 class="footer-title">
+                Address
+            </h3>
+
+            <div class="footer-contact">
+
+                <div class="footer-contact-item">
+
+                    <i class="bi bi-geo-alt-fill"></i>
+
+                    <p>
+                        Park View Academy,<br>
+                        Erode, Tamil Nadu,<br>
+                        India
+                    </p>
+
+                </div>
+
+                <div class="footer-contact-item">
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+                <div class="footer-contact-item">
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                    <p>
+                        info@parkviewacademy.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- =========================
+             SCHOOL HOURS
+        ========================= -->
+
+        <div>
+
+            <h3 class="footer-title">
+                School Hours
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    Monday - Friday
+                </li>
+
+                <li>
+                    8:30 AM - 4:00 PM
+                </li>
+
+                <li>
+                    Saturday
+                </li>
+
+                <li>
+                    9:00 AM - 1:00 PM
+                </li>
+
+                <li>
+                    Sunday - Holiday
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         COPYRIGHT
+    ========================= -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Park View Academy. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+</html>
